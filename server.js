@@ -18,6 +18,9 @@ mongoose.connect(`${MONGO_SERVER}`,
         useUnifiedTopology: true,
     });
 
+    app.get('/', (res, req) => {
+        res.send('home route')
+    })
 // app.get('/books',(req,res)=>{
 //     seedBook();
 //     res.json({
