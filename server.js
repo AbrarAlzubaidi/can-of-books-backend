@@ -11,7 +11,7 @@ const MONGO_SERVER = process.env.MONGO_SERVER
 
 const { bookModel } = require("./models/book");
 //const { seedAuthor } = require("./models/author");
-const { bookController, getbookController } = require("./controllers/bookController");
+//const { bookController, getbookController } = require("./controllers/bookController");
 mongoose.connect(`${MONGO_SERVER}`,
     {
         useNewUrlParser: true,
