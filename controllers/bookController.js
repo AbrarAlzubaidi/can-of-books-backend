@@ -49,15 +49,25 @@ let deleteBookController = (req, res) => {
     });
 }
 
-
-
-// let updateBookController=(req,res)=>{
-//     let id = req.params.id;
-//     let updateValue= req.body;
-//     let option= true;
-//     bookModel.findByIdAndUpdate(id,updateValue)
-
+// const updateStudentController=async (req,res)=>{
+//     let studnetID=req.params.id;
+//     let updatedData=req.body;
+//     StudentModel.findOne({_id:studnetID}).then(student=>{
+//         student.username=updatedData.username;
+//         student.email=updatedData.email;
+//         student.save();
+//     });
+//     let updatedStudentsList=await StudentModel.find({});
+//     res.status(200).send(updatedStudentsList);
 // }
+
+let updateBookController= async (req,res)=>{
+    let id = req.params.id;
+    let updateValue= req.body;
+    let option= true;
+    bookModel.findByIdAndUpdate(id,updateValue)
+
+}
 
 module.exports = {
     getBookController,
