@@ -1,8 +1,5 @@
 "use strict";
 const mongoose = require("mongoose");
-// id (Auto generated)
-// title
-// descpription
 
 const bookSchema = new mongoose.Schema({ // calss 
     title: String,

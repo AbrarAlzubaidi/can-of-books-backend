@@ -7,7 +7,7 @@ let getBookController = (req, res) => {
     bookModel.find().then(data => { // use .then cause .find is a Async function
         res.json(data); // once you reach it make a response to get it
     }).catch((error) => {
-        res.statu(500).send('error there is no data to get it');
+        res.status(500).send('error there is no data to get it');
     });
 }
 
@@ -25,7 +25,7 @@ let createBookController = (req, res) => {
     bookModel.find().then(data => {
         res.status(200).json(data);
     }).catch((error) => {
-        res.statu(500).send('error there is no recived data');
+        res.status(500).send('error there is no recived data');
     });
 }
 
