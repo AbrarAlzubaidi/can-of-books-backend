@@ -21,7 +21,7 @@ mongoose.connect(`${MONGO_SERVER}`,
     });
 //================ importing from files  ======================
 
-const { seedBook } = require('./models/book');
+//const { seedBook } = require('./models/book');
 const { getBookController, createBookController, deleteBookController, updateBookController } = require("./controllers/bookController");
 //============= home route =======================
 
