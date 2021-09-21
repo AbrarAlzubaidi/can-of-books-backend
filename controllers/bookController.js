@@ -61,13 +61,13 @@ let deleteBookController = (req, res) => {
 //     res.status(200).send(updatedStudentsList);
 // }
 
-let updateBookController= async (req,res)=>{
-    let id = req.params.id;
-    let updateValue= req.body;
-    let option= true;
-    bookModel.findByIdAndUpdate(id,updateValue)
+// let updateBookController= async (req,res)=>{
+//     let id = req.params.id;
+//     let updateValue= req.body;
+//     let option= true;
+//     bookModel.findByIdAndUpdate(id,updateValue)
 
-}
+// }
 
 module.exports = {
     getBookController,
