@@ -38,7 +38,7 @@ app.get('/', function (req, res) {
 
 // ========== this get method to make get request/ retrieve data from db ==========
 
-app.get('/get-data', getBookController);
+app.get('/books', getBookController);
 // app.get('/create-data', createBookController);
 // app.get('/delete-data/:id', deleteBookController);
 // app.get('/update-data/:id', updateBookController);
