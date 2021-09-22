@@ -41,7 +41,7 @@ app.get('/', function (req, res) {
 app.get('/books', getBookController);
 app.post('/create-data', createBookController);
 app.delete('/delete-data/:id', deleteBookController);
-// app.get('/update-data/:id', updateBookController);
+app.put('/update-data/:id', updateBookController);
 
 // =========== to open the server ============
 
