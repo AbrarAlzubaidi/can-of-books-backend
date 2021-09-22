@@ -49,29 +49,32 @@ let deleteBookController = (req, res) => {
     });
 }
 
-// const updateStudentController=async (req,res)=>{
-//     let studnetID=req.params.id;
-//     let updatedData=req.body;
-//     StudentModel.findOne({_id:studnetID}).then(student=>{
-//         student.username=updatedData.username;
-//         student.email=updatedData.email;
-//         student.save();
-//     });
-//     let updatedStudentsList=await StudentModel.find({});
-//     res.status(200).send(updatedStudentsList);
-// }
 
-// let updateBookController= async (req,res)=>{
-//     let id = req.params.id;
-//     let updateValue= req.body;
-//     let option= true;
-//     bookModel.findByIdAndUpdate(id,updateValue)
 
-// }
+let updateBookController = async (req, res) => {
+    try {
+        let bookId = req.params.id;
+        let updateValue = req.body;
+        let option = { new: true };
+        bookModel.findByIdAndUpdate({_id:bookId}, updateValue, option).then(result=>{
+            result.title=updateValue.title;
+            result.author=updateValue.author;
+            result.description=updateValue.description;
+            result.status=updateValue.status;
+            result.email=updateValue.email;
+            result.save();
+        });
+        let updatedBookList= await bookModel.find({});
+        res.status(200).send(updatedBookList);
+
+    } catch (error) {
+        console.log(error.message);
+    }
+}
 
 module.exports = {
     getBookController,
     createBookController,
     deleteBookController,
-    // updateBookController,
+    updateBookController,
 }
